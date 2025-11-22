@@ -1,6 +1,9 @@
+using EHS_Benjamin_Pasic.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddHttpClient<NewsService>();
 builder.Services.AddRazorPages();
 
 var app = builder.Build();
