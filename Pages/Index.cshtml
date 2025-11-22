@@ -5,21 +5,5 @@
 }
 
 <div class="container mt-4">
-    <h2>Health News</h2>
-    <div class="row">
-        @foreach (var news in Model.News)
-        {
-            <p>Fetched @Model.News.Count news items.</p>
-            <div class="col-md-4 mb-3">
-                <div class="card">
-                    <img src="@news.ImageUrl" class="card-img-top" alt="@news.Title" />
-                    <div class="card-body">
-                        <h5 class="card-title">@news.Title</h5>
-                        <p class="card-text">@news.Description</p>
-                        <a href="@news.Link" target="_blank" class="btn btn-primary">Read more</a>
-                    </div>
-                </div>
-            </div>
-        }
-    </div>
+    <a href="/News">Go to Health News</a>
 </div>

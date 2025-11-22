@@ -1,0 +1,40 @@
+﻿@page "/News"
+@model EHS_Benjamin_Pasic.Pages.News.NewsModel
+@{
+    ViewData["Title"] = "Health News";
+}
+
+<h2>Health News</h2>
+
+@if (Model.News == null || !Model.News.Any())
+{
+    <p>No news available.</p>
+}
+else
+{
+    <div class="mb-4">
+        <select id="category-select" class="form-select" style="width:250px;">
+            <option value="health" selected="@("health" == Model.CurrentCategory)">Health</option>
+            <option value="technology" selected="@("technology" == Model.CurrentCategory)">Technology</option>
+            <option value="sports" selected="@("sports" == Model.CurrentCategory)">Sports</option>
+            <option value="business" selected="@("business" == Model.CurrentCategory)">Business</option>
+            <option value="science" selected="@("science" == Model.CurrentCategory)">Science</option>
+        </select>
+    </div>
+
+    <div id="news-container">
+        @await Html.PartialAsync("_NewsListPartial", Model.News)
+    </div>
+
+}
+
+@section Scripts {
+    <script>
+        document.getElementById("category-select").addEventListener("change", function() {
+            $.get(`/News?handler=NewsPartial&category=${this.value}`, function (data) {
+                $("#news-container").html(data);
+            });
+        });
+    </script>
+}
+

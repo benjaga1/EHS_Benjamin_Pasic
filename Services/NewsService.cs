@@ -17,9 +17,9 @@ namespace EHS_Benjamin_Pasic.Services
             _apiKey = _configuration["NewsData:ApiKey"];
         }
 
-        public async Task<List<NewsDto>> GetHealthNewsAsync()
+        public async Task<List<NewsDto>> GetNewsByCategoryAsync(string category)
         {
-            string url = $"https://newsdata.io/api/1/news?apikey={_apiKey}&language=en&category=health";
+            string url = $"https://newsdata.io/api/1/news?apikey={_apiKey}&language=en&category={category}";
 
             var response = await _httpClient.GetAsync(url);
             response.EnsureSuccessStatusCode();

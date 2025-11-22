@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EHS_Benjamin_Pasic")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ec8a86eed02164569c41fa455e4e7a2b2ad7ad49")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b484fd34b1ea79209b8e7e54446cabdfd62c71b6")]
 [assembly: System.Reflection.AssemblyProductAttribute("EHS_Benjamin_Pasic")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EHS_Benjamin_Pasic")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
