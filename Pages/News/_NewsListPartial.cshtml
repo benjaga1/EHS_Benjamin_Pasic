@@ -19,7 +19,15 @@ else
 
             <p>@item.Description</p>
 
-            <a href="@item.Link" target="_blank">Read more</a>
+            <a href="/News/Details/@item.ArticleId">Read more</a>
+
+            <br />
+
+            <button class="btn btn-sm btn-primary save-btn"
+                    style="margin-top:10px;"
+                    data-article='@Html.Raw(System.Text.Json.JsonSerializer.Serialize(item))'>
+                Save
+            </button>
         </div>
     }
 }

@@ -36,5 +36,30 @@ else
             });
         });
     </script>
+
+    <script>
+            $(document).on("click", ".save-btn", function () {
+            var rawJson = $(this).attr("data-article");
+            var obj = JSON.parse(rawJson);
+
+            console.log("Raw Data being sent to API:", rawJson);
+            console.log("Data being sent to API:", obj);
+
+            $.ajax({
+                url: "/api/NewsApi/save",
+                type: "POST",
+                contentType: "application/json",
+                data: JSON.stringify(obj),
+                success: function(res) {
+                    alert(res.msg);
+                },
+                error: function(err) {
+                    console.log("AJAX error:", err);
+                    alert("Error saving news.");
+                }
+            });
+        });
+
+    </script>
 }
 

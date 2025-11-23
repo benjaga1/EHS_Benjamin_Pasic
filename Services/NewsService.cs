@@ -1,4 +1,5 @@
-﻿using EHS_Benjamin_Pasic.Models;
+﻿using EHS_Benjamin_Pasic.Data;
+using EHS_Benjamin_Pasic.Models;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
@@ -9,12 +10,14 @@ namespace EHS_Benjamin_Pasic.Services
         private readonly HttpClient _httpClient;
         private readonly IConfiguration _configuration;
         private readonly string _apiKey;
+        private readonly AppDbContext _db;
 
-        public NewsService(HttpClient httpClient, IConfiguration configuration)
+        public NewsService(HttpClient httpClient, IConfiguration configuration, AppDbContext db)
         {
             _httpClient = httpClient;
             _configuration = configuration;
             _apiKey = _configuration["NewsData:ApiKey"];
+            _db = db;
         }
 
         public async Task<List<NewsDto>> GetNewsByCategoryAsync(string category)

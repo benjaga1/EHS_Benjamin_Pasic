@@ -1,0 +1,28 @@
+﻿@page "{articleId}"
+@model EHS_Benjamin_Pasic.Pages.News.DetailsModel
+@{
+    ViewData["Title"] = Model.News?.Title ?? "News Details";
+}
+
+@if (Model.News == null)
+{
+    <p>News not found.</p>
+}
+else
+{
+    <div class="news-details" style="padding:15px; border:1px solid #ddd; border-radius:8px;">
+        <h2>@Model.News.Title</h2>
+        <p><strong>Category:</strong> @Model.News.Category</p>
+        <p><strong>Published:</strong> @Model.News.PublishedAt.ToString("yyyy-MM-dd HH:mm")</p>
+        <p><strong>Source:</strong> <a href="@Model.News.SourceUrl" target="_blank">@Model.News.SourceName</a></p>
+
+        @if (!string.IsNullOrWhiteSpace(Model.News.ImageUrl))
+        {
+            <img src="@Model.News.ImageUrl" alt="@Model.News.Title"
+                 style="width:100%; max-width:600px; height:auto; margin:10px 0; border-radius:6px;" />
+        }
+
+        <p>@Model.News.Description</p>
+        <a href="@Model.News.Link" target="_blank">Read full article</a>
+    </div>
+}
