@@ -1,9 +1,67 @@
 ﻿@page
-@model IndexModel
+@model EHS_Benjamin_Pasic.Pages.IndexModel
 @{
     ViewData["Title"] = "Home page";
 }
 
-<div class="container mt-4">
-    <a href="/News">Go to Health News</a>
+<div class="d-flex mb-4" style="gap:15px; height:550px;">
+    <!-- Hero -->
+    <div style="flex:0 0 70%;">
+        @{
+            var hero = Model.News.FirstOrDefault();
+        }
+        @if (hero != null)
+        {
+            <div class="hero-news position-relative rounded shadow-sm h-100 overflow-hidden">
+                <img src="@(string.IsNullOrWhiteSpace(hero.ImageUrl) ? "/images/default-news.jpeg" : hero.ImageUrl)"
+                     alt="@hero.Title"
+                     class="w-100 h-100"
+                     style="object-fit:cover;" />
+                <div class="hero-overlay position-absolute p-3 text-white" style="bottom:0; background: rgba(0,0,0,0.5); width:100%;">
+                    <h3>@hero.Title</h3>
+                    <p>@hero.Description?.Substring(0, Math.Min(120, hero.Description.Length))...</p>
+                    <a href="/News/Details/@hero.ArticleId" class="btn btn-light btn-sm">Read more</a>
+                </div>
+            </div>
+        }
+    </div>
+
+    <!-- Scrollable Side News -->
+    <div style="flex:0 0 30%; overflow-y:auto; max-height:550px;">
+        @{
+            var sideNews = Model.News.Skip(1).Take(8).ToList();
+        }
+        @foreach (var item in sideNews)
+        {
+            <div class="mini-news p-2 mb-3 rounded shadow-sm" style="background:#f9f9f9;">
+                <img src="@(string.IsNullOrWhiteSpace(item.ImageUrl)
+                                                   ? "/images/default-news.jpeg"
+                                                   : item.ImageUrl)"
+                     alt="@item.Title"
+                     onerror="this.onerror=null; this.src='/images/default-news.jpeg';"
+                     alt="@item.Title"
+                     class="img-fluid w-100 mb-2"
+                     style="height:100px; object-fit:cover; border-radius:6px;" />
+                <h6>@item.Title</h6>
+                <a href="/News/Details/@item.ArticleId" class="btn btn-primary btn-sm mt-1">Read more</a>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="row mb-4" style="gap:15px;">
+    <div class="col-md-6">
+        <div class="info-card text-center h-100 p-4 rounded shadow-sm">
+            <h4>View All News</h4>
+            <p>Browse all categories and explore the latest news.</p>
+            <a href="/News" class="btn btn-gradient">Go to News</a>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="info-card text-center h-100 p-4 rounded shadow-sm">
+            <h4>View Saved News</h4>
+            <p>Check your saved articles and continue reading later.</p>
+            <a href="/SavedNews" class="btn btn-gradient">Go to Saved News</a>
+        </div>
+    </div>
 </div>

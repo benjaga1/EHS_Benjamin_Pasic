@@ -21,7 +21,7 @@ namespace EHS_Benjamin_Pasic.Pages.News
 
         public async Task<IActionResult> OnGetAsync()
         {
-            var allNews = await _newsService.GetNewsByCategoryAsync("health"); // ili prema zadanoj kategoriji
+            var allNews = await _newsService.GetNewsAsync();
             News = allNews.FirstOrDefault(n => n.ArticleId == ArticleId);
 
             if (News == null)

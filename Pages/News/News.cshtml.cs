@@ -26,12 +26,12 @@ namespace EHS_Benjamin_Pasic.Pages.News
         public async Task OnGetAsync(string category = "health")
         {
             CurrentCategory = category;
-            News = await _newsService.GetNewsByCategoryAsync(category);
+            News = await _newsService.GetNewsAsync(category);
         }
 
         public async Task<IActionResult> OnGetNewsPartialAsync(string category)
         {
-            var news = await _newsService.GetNewsByCategoryAsync(category);
+            var news = await _newsService.GetNewsAsync(category);
             return Partial("_NewsListPartial", news);
         }
         public string CurrentCategory { get; set; }

@@ -32,5 +32,20 @@ namespace EHS_Benjamin_Pasic.Controllers
 
             return Ok(new { ok = true, msg = "Saved" });
         }
+
+        [HttpDelete("delete/{id}")]
+        public async Task<IActionResult> DeleteNews(string id)
+        {
+            var item = _db.NewsItems.FirstOrDefault(x => x.ArticleId == id);
+
+            if (item == null)
+                return NotFound(new { ok = false, msg = "Not found" });
+
+            _db.NewsItems.Remove(item);
+            await _db.SaveChangesAsync();
+
+            return Ok(new { ok = true, msg = "Deleted" });
+        }
+
     }
 }

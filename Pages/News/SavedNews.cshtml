@@ -1,0 +1,77 @@
+﻿@page "/SavedNews"
+@model EHS_Benjamin_Pasic.Pages.News.SavedNewsModel
+@{
+    ViewData["Title"] = "Saved News";
+}
+
+<h2>Saved News</h2>
+
+@if (Model.SavedNews == null || !Model.SavedNews.Any())
+{
+    <p>No saved articles.</p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Published</th>
+                <th>Source</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.SavedNews)
+            {
+                <tr>
+                    <td>
+                        <img src="@(!string.IsNullOrEmpty(item.ImageUrl) ? item.ImageUrl : "/images/no-image.png")"
+                             alt="Image" width="100" />
+                    </td>
+                    <td>
+                        <a href="@item.Url" target="_blank">@item.Title</a>
+                    </td>
+                    <td>@item.Category</td>
+                    <td>@item.PublishedAt.ToString("yyyy-MM-dd HH:mm")</td>
+                    <td>
+                        <a href="@item.SourceUrl" target="_blank">@item.SourceName</a>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger delete-btn" data-id="@item.ArticleId">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+@section Scripts {
+    <script>
+        $(document).on("click", ".delete-btn", function () {
+            if (!confirm("Delete this article?")) return;
+
+            var id = $(this).attr("data-id");
+            var row = $(this).closest("tr");
+
+            $.ajax({
+                url: "/api/NewsApi/delete/" + id,
+                type: "DELETE",
+                success: function (res) {
+                    alert(res.msg);
+                    row.remove();
+                },
+                error: function (err) {
+                    console.log("Delete error:", err);
+                    alert("Error deleting article.");
+                }
+            });
+        });
+    </script>
+}
+

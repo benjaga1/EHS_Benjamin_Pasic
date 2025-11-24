@@ -20,6 +20,25 @@ namespace EHS_Benjamin_Pasic.Services
             _db = db;
         }
 
+        public async Task<List<NewsDto>> GetNewsAsync(string category = null)
+        {
+            string url = $"https://newsdata.io/api/1/news?apikey={_apiKey}&language=en";
+
+            if (!string.IsNullOrWhiteSpace(category) && category.ToLower() != "all")
+            {
+                url += $"&category={category}";
+            }
+
+            var response = await _httpClient.GetAsync(url);
+            response.EnsureSuccessStatusCode();
+
+            string json = await response.Content.ReadAsStringAsync();
+            var result = JsonSerializer.Deserialize<NewsApiResponse>(json);
+
+            return result?.Results ?? new List<NewsDto>();
+        }
+
+
         public async Task<List<NewsDto>> GetNewsByCategoryAsync(string category)
         {
             string url = $"https://newsdata.io/api/1/news?apikey={_apiKey}&language=en&category={category}";

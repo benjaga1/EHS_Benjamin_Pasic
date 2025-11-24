@@ -11,11 +11,12 @@ else
         <div class="news-item" style="margin-bottom:25px; padding:10px; border:1px solid #ddd; border-radius:8px;">
             <h3>@item.Title</h3>
 
-            @if (!string.IsNullOrWhiteSpace(item.ImageUrl))
-            {
-                <img src="@item.ImageUrl" alt="@item.Title"
-                     style="width:250px; height:auto; border-radius:6px; margin:10px 0;" />
-            }
+            <img src="@(string.IsNullOrWhiteSpace(item.ImageUrl)
+                              ? "/images/default-news.jpeg"
+                              : item.ImageUrl)"
+                 alt="@item.Title"
+                 onerror="this.onerror=null; this.src='/images/default-news.jpeg';"
+                 style="width:250px; height:auto; border-radius:6px; margin:10px 0;" />
 
             <p>@item.Description</p>
 
