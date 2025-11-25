@@ -5,63 +5,117 @@
 }
 
 <div class="d-flex mb-4" style="gap:15px; height:550px;">
-    <!-- Hero -->
     <div style="flex:0 0 70%;">
         @{
             var hero = Model.News.FirstOrDefault();
         }
         @if (hero != null)
         {
-            <div class="hero-news position-relative rounded shadow-sm h-100 overflow-hidden">
+            <div class="hero-news position-relative rounded shadow-sm h-100 overflow-hidden news-card"
+                 data-article='@Html.Raw(System.Text.Json.JsonSerializer.Serialize(hero))'>
                 <img src="@(string.IsNullOrWhiteSpace(hero.ImageUrl) ? "/images/default-news.jpeg" : hero.ImageUrl)"
                      alt="@hero.Title"
                      class="w-100 h-100"
                      style="object-fit:cover;" />
-                <div class="hero-overlay position-absolute p-3 text-white" style="bottom:0; background: rgba(0,0,0,0.5); width:100%;">
+                <div class="hero-overlay position-absolute p-3 text-white" style="bottom:0; background: rgba(0,0,0,0.7); width:100%;">
                     <h3>@hero.Title</h3>
                     <p>@hero.Description?.Substring(0, Math.Min(120, hero.Description.Length))...</p>
-                    <a href="/News/Details/@hero.ArticleId" class="btn btn-light btn-sm">Read more</a>
                 </div>
+                <span class="star-icon position-absolute hero-star"
+                      style="bottom:10px; right:10px; font-size:44px; cursor:pointer;"
+                      data-saved="@(Model.SavedArticleIds.Contains(hero.ArticleId) ? "true" : "false")">
+                    @(Model.SavedArticleIds.Contains(hero.ArticleId) ? "★" : "☆")
+                </span>
             </div>
         }
     </div>
 
-    <!-- Scrollable Side News -->
-    <div style="flex:0 0 30%; overflow-y:auto; max-height:550px;">
-        @{
-            var sideNews = Model.News.Skip(1).Take(8).ToList();
-        }
-        @foreach (var item in sideNews)
+    <div style="flex:0 0 30%; overflow-y:auto; max-height:550px; overflow-x:hidden;">
+        @foreach (var item in Model.News.Skip(1).Take(8))
         {
-            <div class="mini-news p-2 mb-3 rounded shadow-sm" style="background:#f9f9f9;">
-                <img src="@(string.IsNullOrWhiteSpace(item.ImageUrl)
-                                                   ? "/images/default-news.jpeg"
-                                                   : item.ImageUrl)"
+            <div class="mini-news p-2 mb-3 rounded shadow-sm news-card"
+                 style="background:#f9f9f9;"
+                 data-article='@Html.Raw(System.Text.Json.JsonSerializer.Serialize(item))'>
+                <img src="@(string.IsNullOrWhiteSpace(item.ImageUrl) ? "/images/default-news.jpeg" : item.ImageUrl)"
                      alt="@item.Title"
                      onerror="this.onerror=null; this.src='/images/default-news.jpeg';"
-                     alt="@item.Title"
                      class="img-fluid w-100 mb-2"
                      style="height:100px; object-fit:cover; border-radius:6px;" />
-                <h6>@item.Title</h6>
-                <a href="/News/Details/@item.ArticleId" class="btn btn-primary btn-sm mt-1">Read more</a>
+                <h6 class="small-news-title">@item.Title</h6>
+                <span class="star-icon"
+                      style="font-size:28px; cursor:pointer;"
+                      data-saved="@(Model.SavedArticleIds.Contains(item.ArticleId) ? "true" : "false")">
+                    @(Model.SavedArticleIds.Contains(item.ArticleId) ? "★" : "☆")
+                </span>
             </div>
         }
     </div>
 </div>
 
-<div class="row mb-4" style="gap:15px;">
+<style>
+
+
+</style>
+
+<div class="row mb-4">
     <div class="col-md-6">
-        <div class="info-card text-center h-100 p-4 rounded shadow-sm">
-            <h4>View All News</h4>
-            <p>Browse all categories and explore the latest news.</p>
+        <div class="info-card text-center p-4">
+            <h4 class="mb-2">View All News</h4>
+            <p class="text-muted mb-3">Browse all categories and explore the latest updates.</p>
             <a href="/News" class="btn btn-gradient">Go to News</a>
         </div>
     </div>
+
     <div class="col-md-6">
-        <div class="info-card text-center h-100 p-4 rounded shadow-sm">
-            <h4>View Saved News</h4>
-            <p>Check your saved articles and continue reading later.</p>
+        <div class="info-card text-center p-4">
+            <h4 class="mb-2">View Saved News</h4>
+            <p class="text-muted mb-3">Check your saved articles and continue reading later.</p>
             <a href="/SavedNews" class="btn btn-gradient">Go to Saved News</a>
         </div>
     </div>
 </div>
+@section Scripts {
+    <script>
+        // Handle star click for saving
+        $(document).on("click", ".star-icon", function () {
+            var star = $(this);
+            var card = star.closest(".news-card");
+            var rawJson = card.attr("data-article");
+            var obj = JSON.parse(rawJson);
+
+            if (star.data("saved") === true || star.data("saved") === "true") {
+                // Delete if already saved
+                $.ajax({
+                    url: "/api/NewsApi/delete/" + obj.ArticleId,
+                    type: "DELETE",
+                    success: function(res) {
+                        star.text("☆");
+                        star.data("saved", false);
+                        alert(res.msg);
+                    },
+                    error: function(err) {
+                        console.log(err);
+                        alert("Error deleting article.");
+                    }
+                });
+            } else {
+                // Save article
+                $.ajax({
+                    url: "/api/NewsApi/save",
+                    type: "POST",
+                    contentType: "application/json",
+                    data: JSON.stringify(obj),
+                    success: function(res) {
+                        star.text("★");
+                        star.data("saved", true);
+                        alert(res.msg);
+                    },
+                    error: function(err) {
+                        console.log(err);
+                        alert(err.responseJSON?.msg || "Error saving article.");
+                    }
+                });
+            }
+        });
+    </script>
+}

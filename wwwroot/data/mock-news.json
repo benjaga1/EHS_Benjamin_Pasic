@@ -1,0 +1,231 @@
+[
+  {
+    "article_id": "1",
+    "title": "Did you know organic eggs contain up to 30 more vitamin E than conventional eggs",
+    "description": "Organic eggs offer more nutrients than regular eggs.",
+    "link": "http://localhost/article1",
+    "image_url": "https://waltscomicshop.com/cdn/shop/collections/marvel-123337.jpg?v=1706737955",
+    "category": [ "Health", "Nutrition" ],
+    "pubDate": "2025-02-18 10:00:00",
+    "source_name": "Mock News Source",
+    "source_url": "https://example.com"
+  },
+  {
+    "article_id": "2",
+    "title": "This simple daily habit improves your sleep quality by 40 according to experts",
+    "description": "Experts recommend consistent routines for better sleep.",
+    "link": "http://localhost/article2",
+    "image_url": "https://waltscomicshop.com/cdn/shop/collections/marvel-123337.jpg?v=1706737955",
+    "category": [ "Health", "Lifestyle" ],
+    "pubDate": "2025-02-17 09:30:00",
+    "source_name": "Mock News Source",
+    "source_url": "https://example.com"
+  },
+  {
+    "article_id": "3",
+    "title": "Scientists discover new benefits of omega3 for heart health",
+    "description": "Omega-3 supplements may reduce long-term cardiovascular risk.",
+    "link": "http://localhost/article3",
+    "image_url": "https://waltscomicshop.com/cdn/shop/collections/marvel-123337.jpg?v=1706737955",
+    "category": [ "Health" ],
+    "pubDate": "2025-02-16 15:20:00",
+    "source_name": "Mock News Source",
+    "source_url": "https://example.com"
+  },
+  {
+    "article_id": "4",
+    "title": "New study shows 25 reduction in stress for teens who meditate daily",
+    "description": "Meditation proves effective for stress reduction.",
+    "link": "http://localhost/article4",
+    "image_url": "https://waltscomicshop.com/cdn/shop/collections/marvel-123337.jpg?v=1706737955",
+    "category": [ "Mental Health" ],
+    "pubDate": "2025-02-16 08:10:00",
+    "source_name": "Mock News Source",
+    "source_url": "https://example.com"
+  },
+  {
+    "article_id": "5",
+    "title": "Walking 20 minutes per day linked to longer lifespan",
+    "description": "Simple habits make a big impact on longevity.",
+    "link": "http://localhost/article5",
+    "image_url": "https://waltscomicshop.com/cdn/shop/collections/marvel-123337.jpg?v=1706737955",
+    "category": [ "Fitness" ],
+    "pubDate": "2025-02-15 12:00:00",
+    "source_name": "Mock News Source",
+    "source_url": "https://example.com"
+  },
+  {
+    "article_id": "6",
+    "title": "New research shows caffeine improves memory",
+    "description": "Moderate caffeine consumption benefits cognitive function.",
+    "link": "http://localhost/article6",
+    "image_url": "https://waltscomicshop.com/cdn/shop/collections/marvel-123337.jpg?v=1706737955",
+    "category": [ "Health", "Science" ],
+    "pubDate": "2025-02-15 07:45:00",
+    "source_name": "Mock News Source",
+    "source_url": "https://example.com"
+  },
+  {
+    "article_id": "7",
+    "title": "Experts recommend stretching to reduce back pain",
+    "description": "Simple stretching may reduce back aches.",
+    "link": "http://localhost/article7",
+    "image_url": "https://waltscomicshop.com/cdn/shop/collections/marvel-123337.jpg?v=1706737955",
+    "category": [ "Fitness" ],
+    "pubDate": "2025-02-14 14:22:00",
+    "source_name": "Mock News Source",
+    "source_url": "https://example.com"
+  },
+  {
+    "article_id": "8",
+    "title": "Blue light filter glasses may improve sleep",
+    "description": "New studies show mild benefits from blue light filtering.",
+    "link": "http://localhost/article8",
+    "image_url": "https://waltscomicshop.com/cdn/shop/collections/marvel-123337.jpg?v=1706737955",
+    "category": [ "Lifestyle" ],
+    "pubDate": "2025-02-14 09:00:00",
+    "source_name": "Mock News Source",
+    "source_url": "https://example.com"
+  },
+  {
+    "article_id": "9",
+    "title": "Highprotein breakfasts help maintain weight control",
+    "description": "Protein in the morning can stabilize energy levels.",
+    "link": "http://localhost/article9",
+    "image_url": "https://waltscomicshop.com/cdn/shop/collections/marvel-123337.jpg?v=1706737955",
+    "category": [ "Nutrition" ],
+    "pubDate": "2025-02-13 18:45:00",
+    "source_name": "Mock News Source",
+    "source_url": "https://example.com"
+  },
+  {
+    "article_id": "10",
+    "title": "People who read books daily show improved brain activity",
+    "description": "Reading stimulates several key brain regions.",
+    "link": "http://localhost/article10",
+    "image_url": "https://waltscomicshop.com/cdn/shop/collections/marvel-123337.jpg?v=1706737955",
+    "category": [ "Lifestyle", "Science" ],
+    "pubDate": "2025-02-13 13:10:00",
+    "source_name": "Mock News Source",
+    "source_url": "https://example.com"
+  },
+
+  {
+    "article_id": "11",
+    "title": "Hydration proven to boost cognitive focus by 15",
+    "description": "Even slight dehydration reduces attention.",
+    "link": "http://localhost/article11",
+    "image_url": "https://waltscomicshop.com/cdn/shop/collections/marvel-123337.jpg?v=1706737955",
+    "category": [ "Health" ],
+    "pubDate": "2025-02-12 11:05:00",
+    "source_name": "Mock News Source",
+    "source_url": "https://example.com"
+  },
+  {
+    "article_id": "12",
+    "title": "Dark chocolate improves mood new report finds",
+    "description": "Cocoa flavonoids may improve mood balance.",
+    "link": "http://localhost/article12",
+    "image_url": "https://waltscomicshop.com/cdn/shop/collections/marvel-123337.jpg?v=1706737955g",
+    "category": [ "Nutrition" ],
+    "pubDate": "2025-02-12 06:45:00",
+    "source_name": "Mock News Source",
+    "source_url": "https://example.com"
+  },
+
+  {
+    "article_id": "13",
+    "title": "Breathing exercises help reduce anxiety levels",
+    "description": "Simple breathing routines calm the nervous system.",
+    "link": "http://localhost/article13",
+    "image_url": "https://waltscomicshop.com/cdn/shop/collections/marvel-123337.jpg?v=1706737955",
+    "category": [ "Mental Health" ],
+    "pubDate": "2025-02-11 16:20:00",
+    "source_name": "Mock News Source",
+    "source_url": "https://example.com"
+  },
+
+  {
+    "article_id": "14",
+    "title": "Vitamin D levels linked to immune strength",
+    "description": "Research continues to support Vitamin D benefits.",
+    "link": "http://localhost/article14",
+    "image_url": "https://waltscomicshop.com/cdn/shop/collections/marvel-123337.jpg?v=1706737955",
+    "category": [ "Health" ],
+    "pubDate": "2025-02-11 07:55:00",
+    "source_name": "Mock News Source",
+    "source_url": "https://example.com"
+  },
+
+  {
+    "article_id": "15",
+    "title": "Study finds nature walks improve memory retention",
+    "description": "Time in nature benefits mental clarity.",
+    "link": "http://localhost/article15",
+    "image_url": "https://waltscomicshop.com/cdn/shop/collections/marvel-123337.jpg?v=1706737955",
+    "category": [ "Lifestyle" ],
+    "pubDate": "2025-02-10 12:40:00",
+    "source_name": "Mock News Source",
+    "source_url": "https://example.com"
+  },
+
+  {
+    "article_id": "16",
+    "title": "Doctors warn against skipping breakfast",
+    "description": "Skipping meals impacts metabolism.",
+    "link": "http://localhost/article16",
+    "image_url": "https://waltscomicshop.com/cdn/shop/collections/marvel-123337.jpg?v=1706737955",
+    "category": [ "Nutrition" ],
+    "pubDate": "2025-02-10 08:25:00",
+    "source_name": "Mock News Source",
+    "source_url": "https://example.com"
+  },
+
+  {
+    "article_id": "17",
+    "title": "Weight training improves mobility for adults",
+    "description": "Muscle strength is essential at every age.",
+    "link": "http://localhost/article17",
+    "image_url": "https://waltscomicshop.com/cdn/shop/collections/marvel-123337.jpg?v=1706737955",
+    "category": [ "Fitness" ],
+    "pubDate": "2025-02-09 19:30:00",
+    "source_name": "Mock News Source",
+    "source_url": "https://example.com"
+  },
+
+  {
+    "article_id": "18",
+    "title": "New review confirms benefits of green tea",
+    "description": "Antioxidants in tea support heart and brain health.",
+    "link": "http://localhost/article18",
+    "image_url": "https://waltscomicshop.com/cdn/shop/collections/marvel-123337.jpg?v=1706737955",
+    "category": [ "Nutrition" ],
+    "pubDate": "2025-02-09 14:05:00",
+    "source_name": "Mock News Source",
+    "source_url": "https://example.com"
+  },
+
+  {
+    "article_id": "19",
+    "title": "Tech-free evenings linked to better sleep",
+    "description": "Reducing screen time helps melatonin production.",
+    "link": "http://localhost/article19",
+    "image_url": "https://waltscomicshop.com/cdn/shop/collections/marvel-123337.jpg?v=1706737955",
+    "category": [ "Lifestyle" ],
+    "pubDate": "2025-02-08 21:10:00",
+    "source_name": "Mock News Source",
+    "source_url": "https://example.com"
+  },
+
+  {
+    "article_id": "20",
+    "title": "Researchers identify new gut health benefits in probiotics",
+    "description": "Gut bacteria improvements lead to better digestion.",
+    "link": "http://localhost/article20",
+    "image_url": "https://waltscomicshop.com/cdn/shop/collections/marvel-123337.jpg?v=1706737955",
+    "category": [ "Health" ],
+    "pubDate": "2025-02-08 10:00:00",
+    "source_name": "Mock News Source",
+    "source_url": "https://example.com"
+  }
+]

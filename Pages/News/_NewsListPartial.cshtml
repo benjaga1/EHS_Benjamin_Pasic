@@ -8,27 +8,32 @@ else
 {
     foreach (var item in Model)
     {
-        <div class="news-item" style="margin-bottom:25px; padding:10px; border:1px solid #ddd; border-radius:8px;">
-            <h3>@item.Title</h3>
+        <div class="news-card-list">
+
+            <div class="d-flex justify-content-between">
+                <h3 style="font-size:20px; color:#222;">@item.Title</h3>
+
+                <button class="save-btn"
+                        title="Save"
+                        data-article='@Html.Raw(System.Text.Json.JsonSerializer.Serialize(item))'>
+                    ★
+                </button>
+            </div>
 
             <img src="@(string.IsNullOrWhiteSpace(item.ImageUrl)
-                              ? "/images/default-news.jpeg"
-                              : item.ImageUrl)"
-                 alt="@item.Title"
-                 onerror="this.onerror=null; this.src='/images/default-news.jpeg';"
-                 style="width:250px; height:auto; border-radius:6px; margin:10px 0;" />
+                ? "/images/default-news.jpeg"
+                : item.ImageUrl)"
+                alt="@item.Title"
+                onerror="this.onerror=null; this.src='/images/default-news.jpeg';"
+                style="width:100%; max-width:300px; border-radius:8px; margin:12px 0;" />
 
-            <p>@item.Description</p>
+            <p style="color:#444;">@item.Description</p>
 
-            <a href="/News/Details/@item.ArticleId">Read more</a>
+            <a href="@item.SourceUrl"
+               style="text-decoration:none; color:#0066cc;">
+                Read more →
+            </a>
 
-            <br />
-
-            <button class="btn btn-sm btn-primary save-btn"
-                    style="margin-top:10px;"
-                    data-article='@Html.Raw(System.Text.Json.JsonSerializer.Serialize(item))'>
-                Save
-            </button>
         </div>
     }
 }

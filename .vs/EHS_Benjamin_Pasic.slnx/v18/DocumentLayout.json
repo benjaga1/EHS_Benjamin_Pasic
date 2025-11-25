@@ -3,20 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|c:\\users\\dt user4\\source\\repos\\ehs_benjamin_pasic\\pages\\news\\news.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|solutionrelative:pages\\news\\news.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|c:\\users\\dt user4\\source\\repos\\ehs_benjamin_pasic\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|solutionrelative:pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|c:\\users\\dt user4\\source\\repos\\ehs_benjamin_pasic\\pages\\news\\savednews.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|solutionrelative:pages\\news\\savednews.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|c:\\users\\dt user4\\source\\repos\\ehs_benjamin_pasic\\pages\\news\\savednews.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|solutionrelative:pages\\news\\savednews.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|c:\\users\\dt user4\\source\\repos\\ehs_benjamin_pasic\\pages\\news\\_newslistpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|solutionrelative:pages\\news\\_newslistpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|c:\\users\\dt user4\\source\\repos\\ehs_benjamin_pasic\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|solutionrelative:pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|c:\\users\\dt user4\\source\\repos\\ehs_benjamin_pasic\\pages\\news\\savednews.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|solutionrelative:pages\\news\\savednews.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|c:\\users\\dt user4\\source\\repos\\ehs_benjamin_pasic\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|c:\\users\\dt user4\\source\\repos\\ehs_benjamin_pasic\\.env||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|solutionrelative:.env||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|c:\\users\\dt user4\\source\\repos\\ehs_benjamin_pasic\\pages\\news\\news.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|solutionrelative:pages\\news\\news.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|c:\\users\\dt user4\\source\\repos\\ehs_benjamin_pasic\\pages\\news\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,48 +43,44 @@
       "RelativeMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|solutionrelative:pages\\news\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|c:\\users\\dt user4\\source\\repos\\ehs_benjamin_pasic\\pages\\news\\news.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|solutionrelative:pages\\news\\news.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|c:\\users\\dt user4\\source\\repos\\ehs_benjamin_pasic\\models\\newsitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|solutionrelative:models\\newsitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|c:\\users\\dt user4\\source\\repos\\ehs_benjamin_pasic\\services\\newsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|solutionrelative:services\\newsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|c:\\users\\dt user4\\source\\repos\\ehs_benjamin_pasic\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|c:\\users\\dt user4\\source\\repos\\ehs_benjamin_pasic\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|c:\\users\\dt user4\\source\\repos\\ehs_benjamin_pasic\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|c:\\users\\dt user4\\source\\repos\\ehs_benjamin_pasic\\pages\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|solutionrelative:pages\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|c:\\users\\dt user4\\source\\repos\\ehs_benjamin_pasic\\pages\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|solutionrelative:pages\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|c:\\users\\dt user4\\source\\repos\\ehs_benjamin_pasic\\pages\\news\\news.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|solutionrelative:pages\\news\\news.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|c:\\users\\dt user4\\source\\repos\\ehs_benjamin_pasic\\pages\\news\\savednews.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|solutionrelative:pages\\news\\savednews.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|c:\\users\\dt user4\\source\\repos\\ehs_benjamin_pasic\\pages\\news\\_newslistpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|solutionrelative:pages\\news\\_newslistpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|c:\\users\\dt user4\\source\\repos\\ehs_benjamin_pasic\\services\\newsmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|solutionrelative:services\\newsmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|c:\\users\\dt user4\\source\\repos\\ehs_benjamin_pasic\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|solutionrelative:pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|c:\\users\\dt user4\\source\\repos\\ehs_benjamin_pasic\\controllers\\newsapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|solutionrelative:controllers\\newsapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|c:\\users\\dt user4\\source\\repos\\ehs_benjamin_pasic\\models\\newsitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|solutionrelative:models\\newsitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|c:\\users\\dt user4\\source\\repos\\ehs_benjamin_pasic\\models\\newsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|solutionrelative:models\\newsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|c:\\users\\dt user4\\source\\repos\\ehs_benjamin_pasic\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|c:\\users\\dt user4\\source\\repos\\ehs_benjamin_pasic\\controllers\\newsapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|solutionrelative:controllers\\newsapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8A25F812-06DB-4519-B998-5A5E2C6A0DB2}|EHS_Benjamin_Pasic.csproj|c:\\users\\dt user4\\source\\repos\\ehs_benjamin_pasic\\ehs_benjamin_pasic.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -90,17 +102,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "News.cshtml",
               "DocumentMoniker": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Pages\\News\\News.cshtml",
               "RelativeDocumentMoniker": "Pages\\News\\News.cshtml",
               "ToolTip": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Pages\\News\\News.cshtml",
               "RelativeToolTip": "Pages\\News\\News.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABUAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-11-22T16:54:17.116Z",
               "IsPinned": true,
@@ -108,99 +120,225 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "News.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Pages\\News\\News.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\News\\News.cshtml.cs",
-              "ToolTip": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Pages\\News\\News.cshtml.cs",
-              "RelativeToolTip": "Pages\\News\\News.cshtml.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAIwDMAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T16:54:51.229Z",
+              "DocumentIndex": 13,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAgBAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-24T18:48:24.688Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Pages\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Index.cshtml.cs",
               "ToolTip": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Pages\\Index.cshtml.cs",
               "RelativeToolTip": "Pages\\Index.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAmwA8AAABGAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T13:53:50.657Z",
+              "WhenOpened": "2025-11-25T14:58:03.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "News.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Pages\\News\\News.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\News\\News.cshtml.cs",
+              "ToolTip": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Pages\\News\\News.cshtml.cs",
+              "RelativeToolTip": "Pages\\News\\News.cshtml.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAwwB0AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T23:07:13.191Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Pages\\Index.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Index.cshtml",
-              "ToolTip": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Pages\\Index.cshtml",
-              "RelativeToolTip": "Pages\\Index.cshtml",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAAAgAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-24T12:34:40.095Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SavedNews.cshtml",
-              "DocumentMoniker": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Pages\\News\\SavedNews.cshtml",
-              "RelativeDocumentMoniker": "Pages\\News\\SavedNews.cshtml",
-              "ToolTip": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Pages\\News\\SavedNews.cshtml",
-              "RelativeToolTip": "Pages\\News\\SavedNews.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-23T13:55:36.4Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "SavedNews.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Pages\\News\\SavedNews.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\News\\SavedNews.cshtml.cs",
               "ToolTip": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Pages\\News\\SavedNews.cshtml.cs",
               "RelativeToolTip": "Pages\\News\\SavedNews.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-23T13:56:07.932Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_NewsListPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Pages\\News\\_NewsListPartial.cshtml",
+              "RelativeDocumentMoniker": "Pages\\News\\_NewsListPartial.cshtml",
+              "ToolTip": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Pages\\News\\_NewsListPartial.cshtml",
+              "RelativeToolTip": "Pages\\News\\_NewsListPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-25T01:17:42.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Index.cshtml",
+              "ToolTip": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Pages\\Index.cshtml",
+              "RelativeToolTip": "Pages\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-24T12:34:40.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-25T14:18:17.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": ".env",
+              "DocumentMoniker": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\.env",
+              "RelativeDocumentMoniker": ".env",
+              "ToolTip": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\.env",
+              "RelativeToolTip": ".env",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-11-25T14:16:30.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Details.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Pages\\News\\Details.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\News\\Details.cshtml.cs",
               "ToolTip": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Pages\\News\\Details.cshtml.cs",
               "RelativeToolTip": "Pages\\News\\Details.cshtml.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA1wCEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwCgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-24T13:36:34.432Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Pages\\News\\Details.cshtml",
               "RelativeDocumentMoniker": "Pages\\News\\Details.cshtml",
               "ToolTip": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Pages\\News\\Details.cshtml",
               "RelativeToolTip": "Pages\\News\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACQAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-11-24T15:30:25.541Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
+              "Title": "NewsService.cs",
+              "DocumentMoniker": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Services\\NewsService.cs",
+              "RelativeDocumentMoniker": "Services\\NewsService.cs",
+              "ToolTip": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Services\\NewsService.cs",
+              "RelativeToolTip": "Services\\NewsService.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowDwAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T23:07:25.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T14:43:41.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF8SURBVDhPjVNLTgJBEG1lwpoFB3GNK9fieA48hD8iwT/ihwgSDAIHgAGXXsEV18CNzL/LquqZdsYM6kteXqcy3fWqpmpNRBgOhyABBEgpAFVKPIMUcYzUyOU\u002BXM/b2qtU3vkSfRjjZTCAMAw1A2LwzdFoBPP5HNqdzuL27n4juibWI\u002BUshBA1DIkhEx9iEorFotgslQqGYbxxAGFEqt1MxmPWJLbLZdZ\u002Bv89q5PMFPiTR6z2zdaxR0fXA0XTBcVywkb4fwHXjRteecIDNQ7UmExVYAdPcxYaqclN46na5WenMKjtlVnTYwcXlVYaDqImW9beD5N/TeGy32QHXm6hZ03ZgiSQHp2fnWQ4oBmJqWSqwAqZpZjt4aLXAD4J0VqyZsmoubfB8H2r1eoaD6NXZ9HcHO\u002BSA3f4AjifXl8rItOETM8ckB9WTWpYD9RdeZ1PWVWAHWXPQaDb59f/w8LiqHeh1pvGkCaP6qB8yXusoxmuNZ7XmII4O9vGuEF86osuDYRkpYQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-11-25T14:12:34.967Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-25T01:06:29.509Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Pages\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Pages\\Privacy.cshtml",
+              "RelativeToolTip": "Pages\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-24T13:37:27.234Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "SavedNews.cshtml",
+              "DocumentMoniker": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Pages\\News\\SavedNews.cshtml",
+              "RelativeDocumentMoniker": "Pages\\News\\SavedNews.cshtml",
+              "ToolTip": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Pages\\News\\SavedNews.cshtml",
+              "RelativeToolTip": "Pages\\News\\SavedNews.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACUAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-23T13:55:36.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "NewsDto.cs",
+              "DocumentMoniker": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Models\\NewsDto.cs",
+              "RelativeDocumentMoniker": "Models\\NewsDto.cs",
+              "ToolTip": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Models\\NewsDto.cs",
+              "RelativeToolTip": "Models\\NewsDto.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T01:21:31.432Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "NewsItem.cs",
               "DocumentMoniker": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Models\\NewsItem.cs",
               "RelativeDocumentMoniker": "Models\\NewsItem.cs",
@@ -208,90 +346,23 @@
               "RelativeToolTip": "Models\\NewsItem.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-23T13:07:05.467Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-23T13:07:05.467Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "NewsService.cs",
-              "DocumentMoniker": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Services\\NewsService.cs",
-              "RelativeDocumentMoniker": "Services\\NewsService.cs",
-              "ToolTip": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Services\\NewsService.cs",
-              "RelativeToolTip": "Services\\NewsService.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAA5wCkAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T14:33:46.756Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Privacy.cshtml",
-              "DocumentMoniker": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Pages\\Privacy.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Privacy.cshtml",
-              "ToolTip": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Pages\\Privacy.cshtml",
-              "RelativeToolTip": "Pages\\Privacy.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-24T13:37:27.234Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "_NewsListPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Pages\\News\\_NewsListPartial.cshtml",
-              "RelativeDocumentMoniker": "Pages\\News\\_NewsListPartial.cshtml",
-              "ToolTip": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Pages\\News\\_NewsListPartial.cshtml",
-              "RelativeToolTip": "Pages\\News\\_NewsListPartial.cshtml",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAcwBUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-22T17:13:25.128Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "NewsMapper.cs",
-              "DocumentMoniker": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Services\\NewsMapper.cs",
-              "RelativeDocumentMoniker": "Services\\NewsMapper.cs",
-              "ToolTip": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Services\\NewsMapper.cs",
-              "RelativeToolTip": "Services\\NewsMapper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T22:43:53.856Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Pages\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAcwCEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-24T13:37:14.314Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "NewsApiController.cs",
               "DocumentMoniker": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Controllers\\NewsApiController.cs",
               "RelativeDocumentMoniker": "Controllers\\NewsApiController.cs",
               "ToolTip": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Controllers\\NewsApiController.cs",
               "RelativeToolTip": "Controllers\\NewsApiController.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAcwDAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowBMAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-23T01:19:46.233Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-23T01:19:46.233Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "20251123131141_Init.cs",
               "DocumentMoniker": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Migrations\\20251123131141_Init.cs",
               "RelativeDocumentMoniker": "Migrations\\20251123131141_Init.cs",
@@ -303,31 +374,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "NewsDto.cs",
-              "DocumentMoniker": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Models\\NewsDto.cs",
-              "RelativeDocumentMoniker": "Models\\NewsDto.cs",
-              "ToolTip": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Models\\NewsDto.cs",
-              "RelativeToolTip": "Models\\NewsDto.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-23T01:21:31.432Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T14:43:41.615Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "EHS_Benjamin_Pasic.csproj",
               "DocumentMoniker": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\EHS_Benjamin_Pasic.csproj",
               "RelativeDocumentMoniker": "EHS_Benjamin_Pasic.csproj",
@@ -339,7 +386,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\DT User4\\source\\repos\\EHS_Benjamin_Pasic\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Data\\AppDbContext.cs",

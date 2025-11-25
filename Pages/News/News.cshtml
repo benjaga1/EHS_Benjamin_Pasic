@@ -4,7 +4,7 @@
     ViewData["Title"] = "Health News";
 }
 
-<h2>Health News</h2>
+<h2 class="fw-bold mb-3" style="color:#333;">Health News</h2>
 
 @if (Model.News == null || !Model.News.Any())
 {
@@ -12,14 +12,14 @@
 }
 else
 {
-    <div class="mb-4">
-        <select id="category-select" class="form-select" style="width:250px;">
-            <option value="health" selected="@("health" == Model.CurrentCategory)">Health</option>
-            <option value="technology" selected="@("technology" == Model.CurrentCategory)">Technology</option>
-            <option value="sports" selected="@("sports" == Model.CurrentCategory)">Sports</option>
-            <option value="business" selected="@("business" == Model.CurrentCategory)">Business</option>
-            <option value="science" selected="@("science" == Model.CurrentCategory)">Science</option>
-        </select>
+    <div class="mb-4 d-flex flex-wrap gap-2">
+        @foreach (var category in new[] { "Health", "Technology", "Sports", "Business", "Science" })
+        {
+            var isActive = string.Equals(category.ToLower(), Model.CurrentCategory, StringComparison.OrdinalIgnoreCase);
+            <button class="category-btn @(isActive ? "active" : "")" data-category="@category.ToLower()">
+                @category
+            </button>
+        }
     </div>
 
     <div id="news-container">
@@ -30,17 +30,22 @@ else
 
 @section Scripts {
     <script>
-        document.getElementById("category-select").addEventListener("change", function() {
-            $.get(`/News?handler=NewsPartial&category=${this.value}`, function (data) {
+                $(document).on("click", ".category-btn", function () {
+            $(".category-btn").removeClass("active");
+            $(this).addClass("active");
+
+            var category = $(this).data("category");
+            $.get(`/News?handler=NewsPartial&category=${category}`, function (data) {
                 $("#news-container").html(data);
             });
         });
-    </script>
 
-    <script>
-            $(document).on("click", ".save-btn", function () {
+
+        $(document).on("click", ".save-btn", function () {
             var rawJson = $(this).attr("data-article");
             var obj = JSON.parse(rawJson);
+
+            $(this).toggleClass("saved");
 
             console.log("Raw Data being sent to API:", rawJson);
             console.log("Data being sent to API:", obj);
@@ -59,6 +64,20 @@ else
                 }
             });
         });
+
+        function showToast(msg) {
+            let t = document.createElement("div");
+            t.className = "toast-popup";
+            t.innerText = msg;
+
+            document.body.appendChild(t);
+
+            setTimeout(() => t.style.opacity = "1", 50);
+            setTimeout(() => {
+                t.style.opacity = "0";
+                setTimeout(() => t.remove(), 300);
+            }, 2000);
+        }
 
     </script>
 }

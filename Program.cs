@@ -1,8 +1,15 @@
 using EHS_Benjamin_Pasic.Services;
 using EHS_Benjamin_Pasic.Data;
+using DotNetEnv;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+
+Env.Load();
+
+var newsApiKey = Environment.GetEnvironmentVariable("NEWS_API_KEY");
+
+builder.Configuration["NewsApiKey"] = newsApiKey;
 
 // Add services to the container.
 builder.Services.AddHttpClient<NewsService>();

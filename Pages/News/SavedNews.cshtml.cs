@@ -22,5 +22,15 @@ namespace EHS_Benjamin_Pasic.Pages.News
                 .OrderByDescending(n => n.PublishedAt)
                 .ToListAsync();
         }
+        public static string FormatCategory(string raw)
+        {
+            if (string.IsNullOrWhiteSpace(raw)) return "";
+
+            return string.Join(", ",
+                raw.Split(',', StringSplitOptions.RemoveEmptyEntries)
+                   .Select(c => char.ToUpper(c.Trim()[0]) + c.Trim().Substring(1))
+            );
+        }
+
     }
 }

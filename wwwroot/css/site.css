@@ -17,10 +17,6 @@ html {
   min-height: 100%;
 }
 
-body {
-  margin-bottom: 60px;
-}
-
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
   color: var(--bs-secondary-color);
   text-align: end;
@@ -28,4 +24,319 @@ body {
 
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
+}
+
+:root {
+    --main: #b388ff;
+    --main-light: #e0c6ff;
+    --main-dark: #8e63ff;
+    --glass-bg: rgba(255,255,255,0.55);
+}
+
+body {
+    margin-bottom: 60px;
+    background: linear-gradient(135deg, #faf7ff, #f0e6ff);
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+}
+
+.hero-news, .mini-news, .info-card, .saved-news-card {
+    background: var(--glass-bg) !important;
+    backdrop-filter: blur(12px);
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.7);
+    box-shadow: 0 8px 25px rgba(179,136,255,0.25);
+    transition: 0.3s;
+}
+
+.hero-news:hover, .mini-news:hover, .info-card:hover, .saved-news-card:hover {
+    transform: translateY(-4px) scale(1.01);
+}
+
+.btn-gradient {
+    background: linear-gradient(135deg, var(--main), var(--main-dark));
+    padding: 12px 22px;
+    border-radius: 10px;
+    color: white !important;
+    font-weight: 600;
+    border: none;
+    box-shadow: 0 4px 12px rgba(179,136,255,0.45);
+    transition: transform 0.2s;
+}
+
+.star-icon {
+    color: var(--main-dark);
+    font-size: 22px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.star-icon:hover {
+    transform: scale(1.2);
+}
+
+.hero-star {
+    color: white;
+    text-shadow: 0 0 4px black;
+}
+
+.mini-news img {
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.info-card {
+    text-align: center;
+    padding: 20px;
+}
+
+.info-card h4 {
+    margin-bottom: 10px;
+}
+
+.hero-overlay {
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    padding: 15px;
+    color: white;
+}
+
+.side-news-scroll {
+    overflow-y: auto;
+    max-height: 550px;
+}
+.navbar-brand.fw-bold {
+    color: #6a0dad;
+}
+
+.navbar .navbar-brand {
+    color: #6a0dad !important;
+    font-weight: bold;
+}
+
+.navbar .nav-link {
+    color: #6a0dad !important;
+    font-weight: 500;
+}
+
+.navbar .nav-link:hover {
+    color: #b388ff !important;
+}
+
+.page-title {
+    color: #6a0dad;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.empty-text {
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.saved-table th {
+    background: #f3e8ff;
+    color: #4b0082;
+    font-weight: 600;
+}
+
+.saved-table td, .saved-table th {
+    vertical-align: middle;
+}
+
+.saved-table tr:hover {
+    background-color: #faf5ff;
+}
+
+.thumb-img {
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.news-title a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #4b0082;
+}
+
+.news-title a:hover {
+    text-decoration: underline;
+    color: #8a2be2;
+}
+
+.small-news-title{
+    margin-bottom: 0px;
+}
+
+.details-btn {
+    background-color: #6a0dad;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.details-btn:hover {
+    background-color: #8a2be2;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #d11a2a;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 6px;
+    transition: 0.2s;
+    border: none;
+}
+
+.delete-btn:hover {
+    background-color: #b3001b;
+}
+
+.news-details {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 25px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.55);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.7);
+    box-shadow: 0 8px 25px rgba(179, 136, 255, 0.15);
+}
+
+.details-meta.mb-3 {
+    margin-bottom: 20px !important;
+}
+
+.details-title {
+    font-weight: 700;
+    color: #2b2b2b;
+    margin-bottom: 15px;
+}
+
+.published-date {
+    color: #777;
+}
+
+.details-description {
+    color: #333;
+}
+
+.details-image {
+    width: 100%;
+    max-width: 750px;
+    border-radius: 12px;
+    display: block;
+}
+
+.category-pill {
+    background: var(--main);
+    color: white;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-right: 10px;
+}
+
+.btn-purple {
+    background: linear-gradient(135deg, var(--main), var(--main-dark));
+    border: none;
+    color: #fff !important;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(179,136,255,0.45);
+    transition: 0.2s;
+}
+
+.btn-purple:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.news-category-select {
+    width: 230px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 6px 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.news-card-list {
+    margin-bottom: 25px;
+    padding: 18px;
+    border-radius: 10px;
+    background: white;
+    border: 1px solid #e2e2e2;
+    max-width: 750px;
+    transition: 0.25s ease;
+}
+
+.news-card-list:hover {
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+.save-btn {
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #bbb;
+    padding: 0;
+    line-height: 1;
+    transition: transform .2s, color .2s, text-shadow .2s;
+}
+
+.save-btn:hover {
+    color: #888;
+    transform: scale(1.18);
+}
+
+.save-btn.saved {
+    color: gold;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.7);
+    transform: scale(1.25);
+}
+
+.toast-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 16px;
+    background: #333;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: opacity .3s;
+    z-index: 9999;
+}
+
+.category-btn {
+    background: var(--glass-bg);
+    border: 1px solid rgba(255,255,255,0.7);
+    backdrop-filter: blur(12px);
+    color: var(--main-dark);
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(179,136,255,0.25);
+}
+
+.category-btn:hover {
+    transform: translateY(-2px) scale(1.05);
+    background: var(--main-light);
+    color: #fff;
+}
+
+.category-btn.active {
+    background: var(--main);
+    color: white;
+    box-shadow: 0 6px 16px rgba(142,99,255,0.45);
 }

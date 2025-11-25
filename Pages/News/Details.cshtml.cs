@@ -1,33 +1,43 @@
+using EHS_Benjamin_Pasic.Data;
 using EHS_Benjamin_Pasic.Models;
-using EHS_Benjamin_Pasic.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
 
 namespace EHS_Benjamin_Pasic.Pages.News
 {
     public class DetailsModel : PageModel
     {
-        private readonly NewsService _newsService;
+        private readonly AppDbContext _db;
 
-        public DetailsModel(NewsService newsService)
+        public DetailsModel(AppDbContext db)
         {
-            _newsService = newsService;
+            _db = db;
         }
 
-        public NewsDto News { get; set; }
+        public NewsItem News { get; set; }
 
         [BindProperty(SupportsGet = true)]
         public string ArticleId { get; set; }
 
         public async Task<IActionResult> OnGetAsync()
         {
-            var allNews = await _newsService.GetNewsAsync();
-            News = allNews.FirstOrDefault(n => n.ArticleId == ArticleId);
+            // Load the article only from saved articles
+            News = await _db.NewsItems.FirstOrDefaultAsync(x => x.ArticleId == ArticleId);
 
             if (News == null)
                 return NotFound();
 
             return Page();
+        }
+        public static string FormatCategory(string raw)
+        {
+            if (string.IsNullOrWhiteSpace(raw)) return "";
+
+            return string.Join(", ",
+                raw.Split(',', StringSplitOptions.RemoveEmptyEntries)
+                   .Select(c => char.ToUpper(c.Trim()[0]) + c.Trim().Substring(1))
+            );
         }
     }
 }

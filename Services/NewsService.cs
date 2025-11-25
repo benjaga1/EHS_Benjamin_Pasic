@@ -16,7 +16,7 @@ namespace EHS_Benjamin_Pasic.Services
         {
             _httpClient = httpClient;
             _configuration = configuration;
-            _apiKey = _configuration["NewsData:ApiKey"];
+            _apiKey = _configuration["NewsApiKey"];
             _db = db;
         }
 
@@ -57,5 +57,12 @@ namespace EHS_Benjamin_Pasic.Services
             [JsonPropertyName("results")]
             public List<NewsDto> Results { get; set; }
         }
+
+        public async Task<List<NewsDto>> GetMockNewsAsync()
+        {
+            var json = await File.ReadAllTextAsync("wwwroot/data/mock-news.json");
+            return JsonSerializer.Deserialize<List<NewsDto>>(json);
+        }
+
     }
 }
