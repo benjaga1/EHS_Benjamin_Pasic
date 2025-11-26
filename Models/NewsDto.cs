@@ -32,5 +32,7 @@ namespace EHS_Benjamin_Pasic.Models
 
         [JsonPropertyName("source_url")]
         public string SourceUrl { get; set; }
+
+        public bool IsSaved { get; set; } = false;
     }
 }

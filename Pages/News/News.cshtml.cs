@@ -14,7 +14,6 @@ namespace EHS_Benjamin_Pasic.Pages.News
         [BindProperty]
         public NewsDto NewsToSave { get; set; }
 
-
         public NewsModel(NewsService newsService, AppDbContext db)
         {
             _newsService = newsService;
@@ -22,23 +21,29 @@ namespace EHS_Benjamin_Pasic.Pages.News
         }
 
         public List<NewsDto> News { get; set; } = new List<NewsDto>();
+        public string CurrentCategory { get; set; }
 
         public async Task OnGetAsync(string category = "health")
         {
             CurrentCategory = category;
-            News = await _newsService.GetNewsAsync(category);
-            //News = await _newsService.GetMockNewsAsync();
-
+            await LoadNewsWithSavedStatus(category);
         }
 
         public async Task<IActionResult> OnGetNewsPartialAsync(string category)
         {
-            var news = await _newsService.GetNewsAsync(category);
-            return Partial("_NewsListPartial", news);
-            //var news = await _newsService.GetMockNewsAsync();
-            //return Partial("_NewsListPartial", news);
+            await LoadNewsWithSavedStatus(category);
+            return Partial("_NewsListPartial", News);
         }
-        public string CurrentCategory { get; set; }
+
+        private async Task LoadNewsWithSavedStatus(string category)
+        {
+            News = await _newsService.GetNewsAsync(category);
+
+            var savedIds = _db.NewsItems.Select(x => x.ArticleId).ToHashSet();
+
+            foreach (var n in News)
+                n.IsSaved = savedIds.Contains(n.ArticleId);
+        }
 
         public async Task<IActionResult> OnPostSaveAsync()
         {

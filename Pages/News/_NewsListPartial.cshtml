@@ -9,14 +9,14 @@ else
     foreach (var item in Model)
     {
         <div class="news-card-list">
-
             <div class="d-flex justify-content-between">
                 <h3 style="font-size:20px; color:#222;">@item.Title</h3>
 
-                <button class="save-btn"
+                <button class="save-btn @(item.IsSaved ? "saved" : "")"
                         title="Save"
-                        data-article='@Html.Raw(System.Text.Json.JsonSerializer.Serialize(item))'>
-                    ★
+                        data-article='@Html.Raw(System.Text.Json.JsonSerializer.Serialize(item))'
+                        data-saved="@(item.IsSaved ? "true" : "false")">
+                    @(item.IsSaved ? "★" : "☆")
                 </button>
             </div>
 
@@ -29,11 +29,10 @@ else
 
             <p style="color:#444;">@item.Description</p>
 
-            <a href="@item.SourceUrl"
+            <a href="@item.SourceUrl" target="_blank"
                style="text-decoration:none; color:#0066cc;">
                 Read more →
             </a>
-
         </div>
     }
 }

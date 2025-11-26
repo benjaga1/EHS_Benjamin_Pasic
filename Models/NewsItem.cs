@@ -12,6 +12,5 @@
         public DateTime PublishedAt { get; set; }
         public string SourceName { get; set; } = string.Empty;
         public string SourceUrl { get; set; } = string.Empty;
-        public bool IsFavorite { get; set; } = false;
     }
 }

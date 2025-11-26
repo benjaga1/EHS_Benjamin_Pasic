@@ -20,9 +20,15 @@
                 <div class="hero-overlay position-absolute p-3 text-white" style="bottom:0; background: rgba(0,0,0,0.7); width:100%;">
                     <h3>@hero.Title</h3>
                     <p>@hero.Description?.Substring(0, Math.Min(120, hero.Description.Length))...</p>
+                    <div class="d-flex justify-content-start mt-2">
+                        <a href="@hero.SourceUrl" target="_blank"
+                           class="btn btn-sm btn-light fw-semibold px-3"
+                           style="border-radius:20px;">
+                            Read more →
+                        </a>
+                    </div>
                 </div>
                 <span class="star-icon position-absolute hero-star"
-                      style="bottom:10px; right:10px; font-size:44px; cursor:pointer;"
                       data-saved="@(Model.SavedArticleIds.Contains(hero.ArticleId) ? "true" : "false")">
                     @(Model.SavedArticleIds.Contains(hero.ArticleId) ? "★" : "☆")
                 </span>
@@ -42,11 +48,20 @@
                      class="img-fluid w-100 mb-2"
                      style="height:100px; object-fit:cover; border-radius:6px;" />
                 <h6 class="small-news-title">@item.Title</h6>
-                <span class="star-icon"
-                      style="font-size:28px; cursor:pointer;"
-                      data-saved="@(Model.SavedArticleIds.Contains(item.ArticleId) ? "true" : "false")">
-                    @(Model.SavedArticleIds.Contains(item.ArticleId) ? "★" : "☆")
-                </span>
+                <div class="d-flex justify-content-between align-items-center mt-2">
+                    <span class="star-icon"
+                          style="font-size:26px; cursor:pointer;"
+                          data-saved="@(Model.SavedArticleIds.Contains(item.ArticleId) ? "true" : "false")">
+                        @(Model.SavedArticleIds.Contains(item.ArticleId) ? "★" : "☆")
+                    </span>
+
+                    <a href="@item.SourceUrl" target="_blank"
+                       class="btn btn-sm fw-semibold"
+                       style="border-radius: 20px; background:#8e63ff; color:white; padding:3px 12px;">
+                        Open →
+                    </a>
+                </div>
+
             </div>
         }
     </div>
@@ -76,15 +91,19 @@
 </div>
 @section Scripts {
     <script>
-        // Handle star click for saving
         $(document).on("click", ".star-icon", function () {
             var star = $(this);
             var card = star.closest(".news-card");
             var rawJson = card.attr("data-article");
             var obj = JSON.parse(rawJson);
 
+            if (!obj.image_url || obj.image_url.trim() === "" || obj.image_url.includes("null") || obj.image_url.includes("undefined")) {
+                obj.image_url = "/images/default-news.jpeg";
+            }
+
+            obj.ArticleId = obj.ArticleId || obj.article_id;
+
             if (star.data("saved") === true || star.data("saved") === "true") {
-                // Delete if already saved
                 $.ajax({
                     url: "/api/NewsApi/delete/" + obj.ArticleId,
                     type: "DELETE",
@@ -99,7 +118,6 @@
                     }
                 });
             } else {
-                // Save article
                 $.ajax({
                     url: "/api/NewsApi/save",
                     type: "POST",

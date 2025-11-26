@@ -1,10 +1,10 @@
 ﻿@page "/News"
 @model EHS_Benjamin_Pasic.Pages.News.NewsModel
 @{
-    ViewData["Title"] = "Health News";
+    ViewData["Title"] = "Latest News";
 }
 
-<h2 class="fw-bold mb-3" style="color:#333;">Health News</h2>
+<h2 class="fw-bold mb-3" style="color:#333;">Latest News</h2>
 
 @if (Model.News == null || !Model.News.Any())
 {
@@ -30,7 +30,7 @@ else
 
 @section Scripts {
     <script>
-                $(document).on("click", ".category-btn", function () {
+        $(document).on("click", ".category-btn", function () {
             $(".category-btn").removeClass("active");
             $(this).addClass("active");
 
@@ -41,28 +41,61 @@ else
         });
 
 
-        $(document).on("click", ".save-btn", function () {
-            var rawJson = $(this).attr("data-article");
+        $(document).on("click", ".save-btn", function (e) {
+            var star = $(this);
+            var rawJson = star.attr("data-article");
             var obj = JSON.parse(rawJson);
 
-            $(this).toggleClass("saved");
+            if (!obj.image_url || obj.image_url.trim() === "" || obj.image_url.includes("null") || obj.image_url.includes("undefined")) {
+                obj.image_url = "/images/default-news.jpeg";
+            }
 
-            console.log("Raw Data being sent to API:", rawJson);
-            console.log("Data being sent to API:", obj);
+            obj.ArticleId = obj.ArticleId || obj.article_id;
 
-            $.ajax({
-                url: "/api/NewsApi/save",
-                type: "POST",
-                contentType: "application/json",
-                data: JSON.stringify(obj),
-                success: function(res) {
-                    alert(res.msg);
-                },
-                error: function(err) {
-                    console.log("AJAX error:", err);
-                    alert("Error saving news.");
-                }
-            });
+            star.toggleClass("saved");
+
+            if (star.hasClass("saved")) {
+                star.text("★");
+            } else {
+                star.text("☆");
+            }
+
+            if (star.data("saved") === true || star.data("saved") === "true") {
+          
+                $.ajax({
+                    url: "/api/NewsApi/delete/" + obj.ArticleId,
+                    type: "DELETE",
+                    success: function(res) {
+                        star.text("☆");
+                        star.data("saved", false);
+                        showToast(res.msg);
+                    },
+                    error: function(err) {
+                        star.text("★");
+                        star.data("saved", true);
+                        console.log(err);
+                        showToast("Error deleting article.");
+                    }
+                });
+            } else {
+                $.ajax({
+                    url: "/api/NewsApi/save",
+                    type: "POST",
+                    contentType: "application/json",
+                    data: JSON.stringify(obj),
+                    success: function(res) {
+                        star.text("★");
+                        star.data("saved", true);
+                        showToast(res.msg);
+                    },
+                    error: function(err) {
+                        star.text("☆");
+                        star.data("saved", false);
+                        console.log(err);
+                        showToast("Error saving article.");
+                    }
+                });
+            }
         });
 
         function showToast(msg) {
