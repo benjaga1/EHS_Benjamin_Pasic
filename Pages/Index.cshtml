@@ -110,11 +110,10 @@
                     success: function(res) {
                         star.text("☆");
                         star.data("saved", false);
-                        alert(res.msg);
+                        showToast("Removed from saved", "success");
                     },
                     error: function(err) {
-                        console.log(err);
-                        alert("Error deleting article.");
+                        showToast("Error removing article", "danger");
                     }
                 });
             } else {
@@ -126,11 +125,10 @@
                     success: function(res) {
                         star.text("★");
                         star.data("saved", true);
-                        alert(res.msg);
+                        showToast("Saved article", "success");
                     },
                     error: function(err) {
-                        console.log(err);
-                        alert(err.responseJSON?.msg || "Error saving article.");
+                        showToast("Error saving article", "danger");
                     }
                 });
             }

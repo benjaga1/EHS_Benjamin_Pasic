@@ -8,31 +8,27 @@ else
 {
     foreach (var item in Model)
     {
-        <div class="news-card-list">
-            <div class="d-flex justify-content-between">
-                <h3 style="font-size:20px; color:#222;">@item.Title</h3>
+        <div class="news-card-horizontal d-flex align-items-start mb-3 p-3 rounded shadow-sm">
+            <img src="@(string.IsNullOrWhiteSpace(item.ImageUrl) ? "/images/default-news.jpeg" : item.ImageUrl)"
+                 alt="@item.Title"
+                 class="news-card-img"
+                 onerror="this.onerror=null; this.src='/images/default-news.jpeg';" />
 
-                <button class="save-btn @(item.IsSaved ? "saved" : "")"
-                        title="Save"
-                        data-article='@Html.Raw(System.Text.Json.JsonSerializer.Serialize(item))'
-                        data-saved="@(item.IsSaved ? "true" : "false")">
-                    @(item.IsSaved ? "★" : "☆")
-                </button>
+            <div class="news-card-text ms-3">
+                <h3 class="news-card-title mb-1.5">@item.Title</h3>
+                <p class="news-card-description mb-1">@item.Description</p>
+                <a href="@item.SourceUrl" target="_blank" class="news-card-link">
+                    Read more →
+                </a>
             </div>
 
-            <img src="@(string.IsNullOrWhiteSpace(item.ImageUrl)
-                ? "/images/default-news.jpeg"
-                : item.ImageUrl)"
-                alt="@item.Title"
-                onerror="this.onerror=null; this.src='/images/default-news.jpeg';"
-                style="width:100%; max-width:300px; border-radius:8px; margin:12px 0;" />
-
-            <p style="color:#444;">@item.Description</p>
-
-            <a href="@item.SourceUrl" target="_blank"
-               style="text-decoration:none; color:#0066cc;">
-                Read more →
-            </a>
+            <button class="save-btn @(item.IsSaved ? "saved" : "") ms-3"
+                    title="Save"
+                    data-article='@Html.Raw(System.Text.Json.JsonSerializer.Serialize(item))'
+                    data-saved="@(item.IsSaved ? "true" : "false")">
+                @(item.IsSaved ? "★" : "☆")
+            </button>
         </div>
+
     }
 }

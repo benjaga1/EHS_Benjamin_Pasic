@@ -12,6 +12,7 @@
 }
 else
 {
+    <div class="saved-card">
     <div class="table-responsive">
         <table class="table saved-table">
             <thead>
@@ -54,30 +55,44 @@ else
             </tbody>
         </table>
     </div>
+    </div>
 }
 
 
 @section Scripts {
     <script>
-        $(document).on("click", ".delete-btn", function () {
-            if (!confirm("Delete this article?")) return;
+        let deleteId = null;
+        let deleteRow = null;
 
-            var id = $(this).attr("data-id");
-            var row = $(this).closest("tr");
+        $(document).on("click", ".delete-btn", function () {
+            deleteId = $(this).attr("data-id");
+            deleteRow = $(this).closest("tr");
+
+            const modal = new bootstrap.Modal(document.getElementById("deleteConfirmModal"));
+            modal.show();
+        });
+
+        $(document).on("click", "#confirmDeleteBtn", function () {
+            if (!deleteId) return;
 
             $.ajax({
-                url: "/api/NewsApi/delete/" + id,
+                url: "/api/NewsApi/delete/" + deleteId,
                 type: "DELETE",
                 success: function (res) {
-                    alert(res.msg);
-                    row.remove();
+                    deleteRow.remove();
+                    showToast(res.msg, "success");
+                    deleteId = null;
                 },
-                error: function (err) {
-                    console.log("Delete error:", err);
-                    alert("Error deleting article.");
+                error: function () {
+                    showToast("Error deleting article.", "danger");
                 }
             });
+
+            const modalEl = document.getElementById("deleteConfirmModal");
+            bootstrap.Modal.getInstance(modalEl).hide();
         });
     </script>
 }
+
+
 

@@ -25,7 +25,6 @@ else
     <div id="news-container">
         @await Html.PartialAsync("_NewsListPartial", Model.News)
     </div>
-
 }
 
 @section Scripts {
@@ -68,13 +67,13 @@ else
                     success: function(res) {
                         star.text("☆");
                         star.data("saved", false);
-                        showToast(res.msg);
+                        showToast("Removed from saved", "success");
                     },
                     error: function(err) {
                         star.text("★");
                         star.data("saved", true);
                         console.log(err);
-                        showToast("Error deleting article.");
+                        showToast("Error removing article", "danger");
                     }
                 });
             } else {
@@ -86,32 +85,16 @@ else
                     success: function(res) {
                         star.text("★");
                         star.data("saved", true);
-                        showToast(res.msg);
+                        showToast("Saved article", "success");
                     },
                     error: function(err) {
                         star.text("☆");
                         star.data("saved", false);
-                        console.log(err);
-                        showToast("Error saving article.");
+                        showToast("Error saving article", "danger");
                     }
                 });
             }
         });
-
-        function showToast(msg) {
-            let t = document.createElement("div");
-            t.className = "toast-popup";
-            t.innerText = msg;
-
-            document.body.appendChild(t);
-
-            setTimeout(() => t.style.opacity = "1", 50);
-            setTimeout(() => {
-                t.style.opacity = "0";
-                setTimeout(() => t.remove(), 300);
-            }, 2000);
-        }
-
     </script>
 }
 
