@@ -30,7 +30,7 @@ Napravljena je web aplikacija za pregled, spremanje i praćenje vijesti. Projeka
 
 ```bash
 git clone https://github.com/benjaga1/EHS_Benjamin_Pasic.git
-
+```
 ### Korak 2: Otvori projekat u Visual Studio
 
 1. Pokreni **Visual Studio 2026**.  
@@ -51,11 +51,11 @@ Ako Visual Studio ne restore-a automatski:
 ### Korak 4: Konfiguracija baze i API ključa
 
 1. Napravi fajl `.env` u root folderu:
-NEWS_API_KEY=<news-api-key>
-> Zamijeni `<news-api-key>` sa tvojim stvarnim News API ključem.
+NEWS_API_KEY=news-api-key
+> Zamijeni `news-api-key` sa tvojim stvarnim News API ključem.
 
 2. SQLite baza se nalazi u projektu (`news.db`).  
-   - Ako želiš pregledati bazu, otvori fajl `newsapp.db` u **DB Browser for SQLite**.  
+   - Ako želiš pregledati bazu, otvori fajl `news.db` u **DB Browser for SQLite**.  
 
 ---
 
@@ -73,12 +73,10 @@ Ako želiš preuzeti najnovije promjene sa repozitorija:
 
 ```bash
 git pull origin main
-
+```
 ---
 ### Napomene
 
-Projekat koristi Razor Pages arhitekturu.
-
-Styling je definisan u wwwroot/css/site.css.
-
-Obavezno unesi svoj NEWS_API_KEY u .env fajl da bi API funkcionalnosti radile.
+- Projekat koristi Razor Pages arhitekturu.
+- Styling je definisan u wwwroot/css/site.css.
+- Obavezno unesi svoj NEWS_API_KEY u .env fajl da bi API funkcionalnosti radile.
