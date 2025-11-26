@@ -8,55 +8,53 @@
 
 @if (Model.SavedNews == null || !Model.SavedNews.Any())
 {
-    <p class="empty-text">No saved articles.</p>
+    <p class="empty-text">You haven’t saved any articles yet.</p>
 }
 else
 {
-    <div class="saved-card">
-    <div class="table-responsive">
-        <table class="table saved-table">
-            <thead>
-                <tr>
-                    <th>Image</th>
-                    <th>Title</th>
-                    <th>Category</th>
-                    <th>Published</th>
-                    <th>See Details</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model.SavedNews)
-                {
-                    <tr>
-                        <td>
-                            <img src="@(!string.IsNullOrEmpty(item.ImageUrl) ? item.ImageUrl : "/images/no-image.png")"
-                                 alt="Image" width="100" class="thumb-img" />
-                        </td>
-                        <td class="news-title">
-                            <a href="@item.Url" target="_blank">@item.Title</a>
-                        </td>
-                        <td>@EHS_Benjamin_Pasic.Pages.News.SavedNewsModel.FormatCategory(item.Category)</td>
-                        <td>@item.PublishedAt.ToString("yyyy-MM-dd HH:mm")</td>
-                        <td>
-                            <a class="btn details-btn"
-                               asp-page="/News/Details"
-                               asp-route-articleId="@item.ArticleId">
-                                View
-                            </a>
-                        </td>
-                        <td>
-                            <button class="btn delete-btn" data-id="@item.ArticleId">
-                                Delete
-                            </button>
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
+    <div class="saved-list">
+        @foreach (var item in Model.SavedNews)
+        {
+            <div class="saved-item-card">
+                <img class="saved-thumb"
+                     src="@(!string.IsNullOrEmpty(item.ImageUrl) ? item.ImageUrl : "/images/no-image.png")"
+                     alt="News Image" />
+
+                <div class="saved-content">
+
+                    <h4 class="saved-title">
+                        <a href="@item.Url" target="_blank">@item.Title</a>
+                    </h4>
+
+                    <div class="saved-meta">
+                        <span class="saved-category">
+                            @EHS_Benjamin_Pasic.Pages.News.SavedNewsModel.FormatCategory(item.Category)
+                        </span>
+
+                        <span class="saved-date">
+                            @item.PublishedAt.ToString("yyyy-MM-dd HH:mm")
+                        </span>
+                    </div>
+
+                    <div class="saved-actions">
+                        <a class="btn view-btn"
+                           asp-page="/News/Details"
+                           asp-route-articleId="@item.ArticleId">
+                            <i class="bi bi-eye"></i> View
+                        </a>
+
+                        <button class="btn remove-btn delete-btn"
+                                data-id="@item.ArticleId">
+                            <i class="bi bi-trash"></i> Remove
+                        </button>
+                    </div>
+                </div>
+            </div>
+        }
     </div>
-    </div>
+
 }
+
 
 
 @section Scripts {
@@ -66,7 +64,12 @@ else
 
         $(document).on("click", ".delete-btn", function () {
             deleteId = $(this).attr("data-id");
-            deleteRow = $(this).closest("tr");
+            deleteCard = $(this).closest(".saved-item-card");
+            if (!deleteCard || deleteCard.length === 0) {
+                deleteCard = $('.saved-item-card').filter(function () {
+                    return $(this).find('[data-id="' + deleteId + '"]').length > 0;
+                }).first();
+            }
 
             const modal = new bootstrap.Modal(document.getElementById("deleteConfirmModal"));
             modal.show();
@@ -79,9 +82,13 @@ else
                 url: "/api/NewsApi/delete/" + deleteId,
                 type: "DELETE",
                 success: function (res) {
-                    deleteRow.remove();
+                    deleteCard.remove();
                     showToast(res.msg, "success");
+                    if ($('.saved-item-card').length === 0) {
+                        $('.saved-list').html('<p class="empty-text">You haven’t saved any articles yet.</p>');
+                    }
                     deleteId = null;
+                    deleteCard = null;
                 },
                 error: function () {
                     showToast("Error deleting article.", "danger");
