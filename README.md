@@ -1,82 +1,82 @@
 # EHS_Benjamin_Pasic NewsApp
 
-Napravljena je web aplikacija za pregled, spremanje i praćenje vijesti. Projekat je napravljen koristeći **ASP.NET Core Razor Pages**, **SQLite** i moderni **Bootstrap 5** dizajn.
+A web application has been developed for browsing, saving, and tracking news articles. The project is built using **ASP.NET Core Razor Pages**, **SQLite** and a modern **Bootstrap 5** design.
 
 ---
 
-## Tehnologije
+## Technologies
 
 - ASP.NET Core Razor Pages  
 - C#  
 - SQLite  
 - Bootstrap 5  
 - jQuery  
-- NewsAPI (za dohvat novosti)  
+- NewsData.io API (main data source)
 
 ---
 
-## Upute za pokretanje projekta
+## Project Setup Instructions
 
-### Zahtjevi
+### Requirements
 
 - Visual Studio 2026 Community Edition (ASP.NET workload)  
 - .NET 10
 - Git  
-- Opcionalno: DB Browser for SQLite (za pregled baze)  
+- Optional: DB Browser for SQLite (for database inspection)
 
 ---
 
-### Korak 1: Kloniranje repozitorija
+### Step 1: Clone the repository
 
 ```bash
 git clone https://github.com/benjaga1/EHS_Benjamin_Pasic.git
 ```
-### Korak 2: Otvori projekat u Visual Studio
+### Step 2: Open the project in Visual Studio
 
-1. Pokreni **Visual Studio 2026**.  
-2. Klikni **Open a project or solution**.  
-3. Otvori `.sln` fajl iz root foldera projekta.  
-
----
-
-### Korak 3: Restore NuGet paketa
-
-Ako Visual Studio ne restore-a automatski:  
-
-1. Idi na **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**  
-2. Klikni **Restore**  
+1. Launch **Visual Studio 2026**
+2. Click **Open a project or solution**
+3. Open the `.sln` file located in the project root folder
 
 ---
 
-### Korak 4: Konfiguracija baze i API ključa
+### Step 3: Restore NuGet packages
 
-1. Napravi fajl `.env` u root folderu:
+If Visual Studio does not restore them automatically:
+
+1. Go to **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**  
+2. Click **Restore**  
+
+---
+
+### Step 4: Configure the database and API key
+
+1. Create an `.env` file in the root folder and add:
 NEWS_API_KEY=news-api-key
-> Zamijeni `news-api-key` sa tvojim stvarnim News API ključem.
+> Replace `news-api-key` with your actual NewsAPI key
 
-2. SQLite baza se nalazi u projektu (`news.db`).  
-   - Ako želiš pregledati bazu, otvori fajl `news.db` u **DB Browser for SQLite**.  
-
----
-
-### Korak 5: Pokreni projekat
-
-1. Odaberi **IIS Express** ili drugi browser target u Visual Studio.  
-2. Pritisni **F5** ili klikni **Start Debugging**.  
-3. Projekat će se otvoriti u pretraživaču.  
+2. The SQLite database is included in the project (`news.db`) 
+   - If you want to inspect the database, open `news.db` using **DB Browser for SQLite**
 
 ---
 
-### Korak 6: Git update
+### Step 5: Run the project
 
-Ako želiš preuzeti najnovije promjene sa repozitorija:  
+1. Select **IIS Express** or another browser target in Visual Studio
+2. Press **F5** or click **Start Debugging**
+3. The project will launch in your browser
+
+---
+
+### Step 6: Update using Git
+
+To pull the latest changes from the repository: 
 
 ```bash
 git pull origin main
 ```
 ---
-### Napomene
+### Notes
 
-- Projekat koristi Razor Pages arhitekturu.
-- Styling je definisan u wwwroot/css/site.css.
-- Obavezno unesi svoj NEWS_API_KEY u .env fajl da bi API funkcionalnosti radile.
+- The project uses a Razor Pages architecture
+- Styling is defined in `wwwroot/css/site.css`
+- Make sure to set your `NEWS_API_KEY` in the `.env` file for the API functionality to work
