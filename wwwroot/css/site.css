@@ -568,3 +568,26 @@ body {
 .elegant-modal .btn-danger {
     border-radius: 20px;
 }
+
+.input-wrapper {
+    position: relative;
+}
+
+    .input-wrapper .validation-message {
+        position: absolute;
+        top: 100%; /* right below the input */
+        left: 0;
+        color: #dc3545;
+        font-size: 0.8rem;
+        background: rgba(255,255,255,0.85);
+        padding: 2px 6px;
+        border-radius: 6px;
+        white-space: normal;
+        z-index: 5;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        display: none;
+    }
+
+        .input-wrapper .validation-message.active {
+            display: block;
+        }

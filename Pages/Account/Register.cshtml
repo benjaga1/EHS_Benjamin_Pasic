@@ -1,0 +1,108 @@
+﻿@page
+@model EHS_Benjamin_Pasic.Pages.Account.RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="login-wrapper d-flex justify-content-center align-items-center">
+    <div class="login-card p-5">
+        <h2 class="text-center mb-4" style="color: var(--main-dark); font-weight: 600;">Register</h2>
+
+        <form method="post" id="registerForm">
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control input-glass" id="username" name="Username" required minlength="5" />
+                <div class="text-danger small mt-1" id="usernameError"></div>
+                <span asp-validation-for="Username" class="text-danger small"></span>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control input-glass" id="email" name="Email" required />
+                <div class="text-danger small mt-1" id="emailError"></div>
+                <span asp-validation-for="Email" class="text-danger small"></span>
+            </div>
+
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control input-glass" id="password" name="Password" required />
+                <small class="text-muted">
+                    Password must:
+                    <ul>
+                        <li>Be at least 6 characters</li>
+                        <li>Contain at least one uppercase letter</li>
+                        <li>Contain at least one digit ('0'-'9')</li>
+                        <li>Contain at least one non-alphanumeric character</li>
+                    </ul>
+                </small>
+                <div class="text-danger small mt-1" id="passwordError"></div>
+            </div>
+
+            <div class="mb-3">
+                <label for="confirmPassword" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control input-glass" id="confirmPassword" name="ConfirmPassword" required />
+                <div class="text-danger small mt-1" id="confirmError"></div>
+            </div>
+
+            <button type="submit" class="btn btn-gradient w-100 mb-3">Register</button>
+
+            @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+            {
+                <div class="text-danger text-center mt-2">@Model.ErrorMessage</div>
+            }
+
+            <p class="text-center mt-3">
+                Already have an account? <a href="/Account/Login" style="color: var(--main-dark); font-weight: 500;">Login here</a>
+            </p>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        (function() {
+            const form = document.getElementById("registerForm");
+
+            form.addEventListener("submit", function(e) {
+                // Clear previous errors
+                ["usernameError","emailError","passwordError","confirmError"].forEach(id => {
+                    document.getElementById(id).textContent = "";
+                });
+
+                let valid = true;
+                const username = document.getElementById("username").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const password = document.getElementById("password").value;
+                const confirm = document.getElementById("confirmPassword").value;
+
+                // Username
+                if(username.length < 5){
+                    document.getElementById("usernameError").textContent = "Username must be at least 5 characters.";
+                    valid = false;
+                }
+
+                // Email
+                const emailRegex = /^[^\s@@]+@@[^\s@@]+\.[^\s@@]+$/;
+                if (!emailRegex.test(email)) {
+                    document.getElementById("emailError").textContent = "Enter a valid email address.";
+                    valid = false;
+                }
+
+                // Password complexity
+                const pwdRegex = new RegExp("^(?=.*[A-Z])(?=.*\\d)(?=.*\\W).{6,}$");
+                if(!pwdRegex.test(password)){
+                    document.getElementById("passwordError").textContent = "Password must meet all complexity rules.";
+                    valid = false;
+                }
+
+                // Confirm password
+                if(password !== confirm){
+                    document.getElementById("confirmError").textContent = "Passwords do not match.";
+                    valid = false;
+                }
+
+                if(!valid) e.preventDefault();
+            });
+        })();
+    </script>
+}

@@ -1,0 +1,33 @@
+﻿@page
+@model EHS_Benjamin_Pasic.Pages.Account.LoginModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="login-wrapper d-flex justify-content-center align-items-center">
+    <div class="login-card p-5">
+        <h2 class="text-center mb-4" style="color: var(--main-dark); font-weight: 600;">Login</h2>
+
+        <form method="post">
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control input-glass" id="username" name="Username" required />
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control input-glass" id="password" name="Password" required />
+            </div>
+
+            <button type="submit" class="btn btn-gradient w-100 mb-3">Login</button>
+
+            @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+            {
+                <p class="text-danger text-center">@Model.ErrorMessage</p>
+            }
+
+            <p class="text-center mt-3">
+                Don't have an account? <a href="/Account/Register" style="color: var(--main-dark); font-weight: 500;">Register here</a>
+            </p>
+        </form>
+    </div>
+</div>

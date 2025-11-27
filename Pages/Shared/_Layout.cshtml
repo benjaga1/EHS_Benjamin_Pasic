@@ -27,11 +27,25 @@
                                 News
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" style="@(User.Identity.IsAuthenticated ? "" : "display:none;")">
                             <a class="nav-link @(Context.Request.Path.StartsWithSegments("/SavedNews") ? "active" : "")" href="/SavedNews">
                                 Saved
                             </a>
                         </li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Account/Logout">Logout (@User.Identity.Name)</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link @(Context.Request.Path.StartsWithSegments("/Account/Login") ? "active" : "")"  href="/Account/Login">
+                                    Login
+                                </a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>

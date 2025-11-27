@@ -28,10 +28,13 @@
                         </a>
                     </div>
                 </div>
+                @if (User.Identity.IsAuthenticated)
+                {
                 <span class="star-icon position-absolute hero-star"
-                      data-saved="@(Model.SavedArticleIds.Contains(hero.ArticleId) ? "true" : "false")">
-                    @(Model.SavedArticleIds.Contains(hero.ArticleId) ? "★" : "☆")
-                </span>
+                    data-saved="@(        Model.SavedArticleIds.Contains(hero.ArticleId) ? "true" : "false")">
+                        @(        Model.SavedArticleIds.Contains(hero.ArticleId) ? "★" : "☆")
+                    </span>
+                }
             </div>
         }
     </div>
@@ -49,11 +52,14 @@
                      style="height:100px; object-fit:cover; border-radius:6px;" />
                 <h6 class="small-news-title">@item.Title</h6>
                 <div class="d-flex justify-content-between align-items-center mt-2">
-                    <span class="star-icon"
-                          style="font-size:26px; cursor:pointer;"
-                          data-saved="@(Model.SavedArticleIds.Contains(item.ArticleId) ? "true" : "false")">
-                        @(Model.SavedArticleIds.Contains(item.ArticleId) ? "★" : "☆")
-                    </span>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <span class="star-icon"
+                        style="font-size:26px; cursor:pointer;"
+                        data-saved="@(        Model.SavedArticleIds.Contains(item.ArticleId) ? "true" : "false")">
+                            @(        Model.SavedArticleIds.Contains(item.ArticleId) ? "★" : "☆")
+                        </span>
+                    }
 
                     <a href="@item.SourceUrl" target="_blank"
                        class="btn btn-sm fw-semibold"
@@ -86,6 +92,8 @@
 </div>
 
 @section Scripts {
+    @if (User.Identity.IsAuthenticated)
+    {
     <script>
         $(document).on("click", ".star-icon", function () {
             var star = $(this);
@@ -130,4 +138,5 @@
             }
         });
     </script>
+    }
 }

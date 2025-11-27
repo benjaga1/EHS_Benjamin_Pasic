@@ -21,13 +21,15 @@ else
                     Read more →
                 </a>
             </div>
-
-            <button class="save-btn @(item.IsSaved ? "saved" : "") ms-3"
-                    title="Save"
-                    data-article='@Html.Raw(System.Text.Json.JsonSerializer.Serialize(item))'
-                    data-saved="@(item.IsSaved ? "true" : "false")">
-                @(item.IsSaved ? "★" : "☆")
-            </button>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <button class="save-btn @(item.IsSaved ? "saved" : "") ms-3"
+                        title="Save"
+                        data-article='@Html.Raw(System.Text.Json.JsonSerializer.Serialize(item))'
+                        data-saved="@(item.IsSaved ? "true" : "false")">
+                    @(item.IsSaved ? "★" : "☆")
+                </button>
+            }
         </div>
 
     }

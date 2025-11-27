@@ -20,7 +20,7 @@ Napravljena je web aplikacija za pregled, spremanje i praćenje vijesti. Projeka
 ### Zahtjevi
 
 - Visual Studio 2026 Community Edition (ASP.NET workload)  
-- .NET SDK (8 ili novija verzija)  
+- .NET 10
 - Git  
 - Opcionalno: DB Browser for SQLite (za pregled baze)  
 

@@ -22,7 +22,6 @@ namespace EHS_Benjamin_Pasic.Pages.News
 
         public async Task<IActionResult> OnGetAsync()
         {
-            // Load the article only from saved articles
             News = await _db.NewsItems.FirstOrDefaultAsync(x => x.ArticleId == ArticleId);
 
             if (News == null)

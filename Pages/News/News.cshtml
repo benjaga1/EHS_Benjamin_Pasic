@@ -38,63 +38,67 @@ else
                 $("#news-container").html(data);
             });
         });
-
-
-        $(document).on("click", ".save-btn", function (e) {
-            var star = $(this);
-            var rawJson = star.attr("data-article");
-            var obj = JSON.parse(rawJson);
-
-            if (!obj.image_url || obj.image_url.trim() === "" || obj.image_url.includes("null") || obj.image_url.includes("undefined")) {
-                obj.image_url = "/images/default-news.jpeg";
-            }
-
-            obj.ArticleId = obj.ArticleId || obj.article_id;
-
-            star.toggleClass("saved");
-
-            if (star.hasClass("saved")) {
-                star.text("★");
-            } else {
-                star.text("☆");
-            }
-
-            if (star.data("saved") === true || star.data("saved") === "true") {
-          
-                $.ajax({
-                    url: "/api/NewsApi/delete/" + obj.ArticleId,
-                    type: "DELETE",
-                    success: function(res) {
-                        star.text("☆");
-                        star.data("saved", false);
-                        showToast("Removed from saved", "success");
-                    },
-                    error: function(err) {
-                        star.text("★");
-                        star.data("saved", true);
-                        console.log(err);
-                        showToast("Error removing article", "danger");
-                    }
-                });
-            } else {
-                $.ajax({
-                    url: "/api/NewsApi/save",
-                    type: "POST",
-                    contentType: "application/json",
-                    data: JSON.stringify(obj),
-                    success: function(res) {
-                        star.text("★");
-                        star.data("saved", true);
-                        showToast("Saved article", "success");
-                    },
-                    error: function(err) {
-                        star.text("☆");
-                        star.data("saved", false);
-                        showToast("Error saving article", "danger");
-                    }
-                });
-            }
-        });
     </script>
+
+    @if (User.Identity.IsAuthenticated)
+    {
+        <script>
+            $(document).on("click", ".save-btn", function (e) {
+                var star = $(this);
+                var rawJson = star.attr("data-article");
+                var obj = JSON.parse(rawJson);
+
+                if (!obj.image_url || obj.image_url.trim() === "" || obj.image_url.includes("null") || obj.image_url.includes("undefined")) {
+                    obj.image_url = "/images/default-news.jpeg";
+                }
+
+                obj.ArticleId = obj.ArticleId || obj.article_id;
+
+                star.toggleClass("saved");
+
+                if (star.hasClass("saved")) {
+                    star.text("★");
+                } else {
+                    star.text("☆");
+                }
+
+                if (star.data("saved") === true || star.data("saved") === "true") {
+          
+                    $.ajax({
+                        url: "/api/NewsApi/delete/" + obj.ArticleId,
+                        type: "DELETE",
+                        success: function(res) {
+                            star.text("☆");
+                            star.data("saved", false);
+                            showToast("Removed from saved", "success");
+                        },
+                        error: function(err) {
+                            star.text("★");
+                            star.data("saved", true);
+                            console.log(err);
+                            showToast("Error removing article", "danger");
+                        }
+                    });
+                } else {
+                    $.ajax({
+                        url: "/api/NewsApi/save",
+                        type: "POST",
+                        contentType: "application/json",
+                        data: JSON.stringify(obj),
+                        success: function(res) {
+                            star.text("★");
+                            star.data("saved", true);
+                            showToast("Saved article", "success");
+                        },
+                        error: function(err) {
+                            star.text("☆");
+                            star.data("saved", false);
+                            showToast("Error saving article", "danger");
+                        }
+                    });
+                }
+            });
+        </script>
+    }
 }
 

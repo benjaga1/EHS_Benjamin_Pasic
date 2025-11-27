@@ -1,8 +1,10 @@
+using EHS_Benjamin_Pasic.Data;
 using EHS_Benjamin_Pasic.Models;
 using EHS_Benjamin_Pasic.Services;
-using EHS_Benjamin_Pasic.Data;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
 
 namespace EHS_Benjamin_Pasic.Pages.News
 {
@@ -10,14 +12,16 @@ namespace EHS_Benjamin_Pasic.Pages.News
     {
         private readonly NewsService _newsService;
         private readonly AppDbContext _db;
+        private readonly UserManager<AppUser> _userManager;
 
         [BindProperty]
         public NewsDto NewsToSave { get; set; }
 
-        public NewsModel(NewsService newsService, AppDbContext db)
+        public NewsModel(NewsService newsService, AppDbContext db, UserManager<AppUser> userManager)
         {
             _newsService = newsService;
             _db = db;
+            _userManager = userManager;
         }
 
         public List<NewsDto> News { get; set; } = new List<NewsDto>();
@@ -39,7 +43,17 @@ namespace EHS_Benjamin_Pasic.Pages.News
         {
             News = await _newsService.GetNewsAsync(category);
 
-            var savedIds = _db.NewsItems.Select(x => x.ArticleId).ToHashSet();
+            var user = await _userManager.GetUserAsync(User);
+
+            HashSet<string> savedIds = new();
+
+            if (user != null)
+            {
+                savedIds = await _db.UserSavedNews
+                    .Where(x => x.UserId == user.Id)
+                    .Select(x => x.NewsItem.ArticleId)
+                    .ToHashSetAsync();
+            }
 
             foreach (var n in News)
                 n.IsSaved = savedIds.Contains(n.ArticleId);
