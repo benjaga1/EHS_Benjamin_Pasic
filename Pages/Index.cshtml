@@ -21,7 +21,7 @@
                     <h3>@hero.Title</h3>
                     <p>@hero.Description?.Substring(0, Math.Min(120, hero.Description.Length))...</p>
                     <div class="d-flex justify-content-start mt-2">
-                        <a href="@hero.SourceUrl" target="_blank"
+                        <a href="@hero.Link" target="_blank"
                            class="btn btn-sm btn-light fw-semibold px-3"
                            style="border-radius:20px;">
                             Read more →
@@ -61,7 +61,7 @@
                         </span>
                     }
 
-                    <a href="@item.SourceUrl" target="_blank"
+                    <a href="@item.Link" target="_blank"
                        class="btn btn-sm fw-semibold"
                        style="border-radius: 20px; background:#8e63ff; color:white; padding:3px 12px;">
                         Open →

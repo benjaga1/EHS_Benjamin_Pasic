@@ -32,7 +32,7 @@ namespace EHS_Benjamin_Pasic.Pages.Account
 
             if (result.Succeeded)
             {
-                return RedirectToPage("/News/News");
+                return RedirectToPage("/Index");
             }
 
             ErrorMessage = "Invalid username or password";

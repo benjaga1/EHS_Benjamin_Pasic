@@ -1,11 +1,13 @@
 using EHS_Benjamin_Pasic.Data;
 using EHS_Benjamin_Pasic.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
 namespace EHS_Benjamin_Pasic.Pages.News
 {
+    [Authorize]
     public class DetailsModel : PageModel
     {
         private readonly AppDbContext _db;

@@ -68,7 +68,7 @@ namespace EHS_Benjamin_Pasic.Pages.Account
             if (result.Succeeded)
             {
                 await _signInManager.SignInAsync(user, isPersistent: false);
-                return RedirectToPage("/News/News");
+                return RedirectToPage("/Index");
             }
 
             ErrorMessage = string.Join(" | ", result.Errors.Select(e => e.Description));
